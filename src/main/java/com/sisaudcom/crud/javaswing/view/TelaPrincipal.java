@@ -105,17 +105,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
         funcionarioScrollPane = new javax.swing.JScrollPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         funcionariosTable = new javax.swing.JTable();
-        funcionarioPanel = new java.awt.Panel();
-        cadastroButton = new javax.swing.JButton();
-        statusCheckBox = new javax.swing.JCheckBox();
-        salarioLabel = new javax.swing.JLabel();
-        salarioTextField = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        nomeLabel = new javax.swing.JLabel();
+        nomeTextField = new javax.swing.JTextField();
         dataDeAdmissaoLabel = new javax.swing.JLabel();
         dataAdmissaoFormattedTextField = new javax.swing.JFormattedTextField();
-        nomeTextField = new javax.swing.JTextField();
-        nomeLabel = new javax.swing.JLabel();
+        salarioLabel = new javax.swing.JLabel();
+        salarioTextField = new javax.swing.JTextField();
+        statusCheckBox = new javax.swing.JCheckBox();
+        cadastroButton = new javax.swing.JButton();
         sairLabel = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -156,15 +155,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         funcionarioScrollPane.setViewportView(jScrollPane1);
 
-        funcionarioPanel.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setText("CADASTRAR NOVO FUNCIONARIO");
 
-        cadastroButton.setText("Cadastrar");
-        cadastroButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cadastroButton.addActionListener(this::cadastroButtonActionPerformed);
-
-        statusCheckBox.setText("Ativo");
-
-        salarioLabel.setText("Salário");
+        nomeLabel.setText("Nome");
 
         dataDeAdmissaoLabel.setText("Data de Admissão");
 
@@ -174,7 +168,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
-        nomeLabel.setText("Nome");
+        salarioLabel.setText("Salário");
+
+        statusCheckBox.setText("Ativo");
+
+        cadastroButton.setText("Cadastrar");
+        cadastroButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cadastroButton.addActionListener(this::cadastroButtonActionPerformed);
 
         sairLabel.setText("<html><u>Sair</u></html>");
         sairLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -184,103 +184,84 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel1.setText("CADASTRAR NOVO FUNCIONARIO");
-
-        javax.swing.GroupLayout funcionarioPanelLayout = new javax.swing.GroupLayout(funcionarioPanel);
-        funcionarioPanel.setLayout(funcionarioPanelLayout);
-        funcionarioPanelLayout.setHorizontalGroup(
-            funcionarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(funcionarioPanelLayout.createSequentialGroup()
-                .addGroup(funcionarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(funcionarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(salarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(funcionarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(funcionarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(funcionarioPanelLayout.createSequentialGroup()
-                                    .addGap(54, 54, 54)
-                                    .addComponent(cadastroButton))
-                                .addGroup(funcionarioPanelLayout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(nomeLabel))
-                                .addGroup(funcionarioPanelLayout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(nomeTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE))
-                                .addGroup(funcionarioPanelLayout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(dataDeAdmissaoLabel))
-                                .addGroup(funcionarioPanelLayout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(dataAdmissaoFormattedTextField))
-                                .addGroup(funcionarioPanelLayout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(sairLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(funcionarioPanelLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(salarioLabel))))
-                    .addGroup(funcionarioPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(statusCheckBox))
-                    .addGroup(funcionarioPanelLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel1)))
-                .addContainerGap(7, Short.MAX_VALUE))
-        );
-        funcionarioPanelLayout.setVerticalGroup(
-            funcionarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, funcionarioPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(nomeLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(dataDeAdmissaoLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(dataAdmissaoFormattedTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(salarioLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(salarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(statusCheckBox)
-                .addGap(18, 18, 18)
-                .addComponent(cadastroButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(sairLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addComponent(funcionarioScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 725, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(funcionarioPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(salarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(48, 48, 48)
+                                    .addComponent(cadastroButton))
+                                .addComponent(nomeLabel)
+                                .addComponent(nomeTextField)
+                                .addComponent(dataDeAdmissaoLabel)
+                                .addComponent(dataAdmissaoFormattedTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(salarioLabel)))
+                    .addComponent(statusCheckBox)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel1))
+                    .addComponent(sairLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(41, Short.MAX_VALUE)
+                .addContainerGap(35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(funcionarioPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(funcionarioScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26))
+                    .addComponent(funcionarioScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(nomeLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dataDeAdmissaoLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dataAdmissaoFormattedTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(salarioLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(salarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(statusCheckBox)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(cadastroButton))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(sairLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void sairLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sairLabelMouseClicked
-        java.awt.EventQueue.invokeLater(() -> {
-            new TelaLogin().setVisible(true);
-            dispose();
-        });
+        int opcao = javax.swing.JOptionPane.showConfirmDialog(
+                this,
+                "Deseja realmente sair?",
+                "Confirmação",
+                javax.swing.JOptionPane.YES_NO_OPTION,
+                javax.swing.JOptionPane.QUESTION_MESSAGE
+        );
+
+        if (opcao == javax.swing.JOptionPane.YES_OPTION) {
+            java.awt.EventQueue.invokeLater(() -> {
+                new TelaLogin().setVisible(true);
+                dispose();
+            });
+        }
     }//GEN-LAST:event_sairLabelMouseClicked
 
     private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
@@ -290,14 +271,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         String salarioTexto = salarioTextField.getText().trim();
 
         if (nome.isBlank()
-            || dataTexto.isBlank()
-            || salarioTexto.isBlank()) {
+                || dataTexto.isBlank()
+                || salarioTexto.isBlank()) {
 
             JOptionPane.showMessageDialog(
-                this,
-                "Preencha todos os campos.",
-                "Atenção",
-                JOptionPane.WARNING_MESSAGE
+                    this,
+                    "Preencha todos os campos.",
+                    "Atenção",
+                    JOptionPane.WARNING_MESSAGE
             );
 
             return;
@@ -306,17 +287,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
         try {
 
             SimpleDateFormat formato
-            = new SimpleDateFormat("dd/MM/yyyy");
+                    = new SimpleDateFormat("dd/MM/yyyy");
 
             formato.setLenient(false);
 
             java.util.Date dataAdmissao
-            = formato.parse(dataTexto);
+                    = formato.parse(dataTexto);
 
             double salario
-            = Double.parseDouble(
-                salarioTexto.replace(",", ".")
-            );
+                    = Double.parseDouble(
+                            salarioTexto.replace(",", ".")
+                    );
 
             Funcionario funcionario = new Funcionario();
 
@@ -324,17 +305,29 @@ public class TelaPrincipal extends javax.swing.JFrame {
             funcionario.setDataDeAdmissao(dataAdmissao);
             funcionario.setSalario(salario);
             funcionario.setStatus(
-                statusCheckBox.isSelected()
+                    statusCheckBox.isSelected()
             );
 
+            int opcao = JOptionPane.showConfirmDialog(
+                    this,
+                    "Deseja realmente cadastrar o funcionário \"" + nome + "\"?",
+                    "Confirmação",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE
+            );
+
+            if (opcao != JOptionPane.YES_OPTION) {
+                return;
+            }
+
             FuncionarioService funcionarioService
-            = new FuncionarioService();
+                    = new FuncionarioService();
 
             funcionarioService.cadastrar(funcionario);
 
             JOptionPane.showMessageDialog(
-                this,
-                "Funcionário cadastrado com sucesso!"
+                    this,
+                    "Funcionário cadastrado com sucesso!"
             );
 
             nomeTextField.setText("");
@@ -347,37 +340,37 @@ public class TelaPrincipal extends javax.swing.JFrame {
         } catch (ParseException e) {
 
             JOptionPane.showMessageDialog(
-                this,
-                "Informe uma data válida no formato dd/MM/yyyy.",
-                "Atenção",
-                JOptionPane.WARNING_MESSAGE
+                    this,
+                    "Informe uma data válida no formato dd/MM/yyyy.",
+                    "Atenção",
+                    JOptionPane.WARNING_MESSAGE
             );
 
         } catch (NumberFormatException e) {
 
             JOptionPane.showMessageDialog(
-                this,
-                "Informe um salário válido.",
-                "Atenção",
-                JOptionPane.WARNING_MESSAGE
+                    this,
+                    "Informe um salário válido.",
+                    "Atenção",
+                    JOptionPane.WARNING_MESSAGE
             );
 
         } catch (IllegalArgumentException e) {
 
             JOptionPane.showMessageDialog(
-                this,
-                e.getMessage(),
-                "Atenção",
-                JOptionPane.WARNING_MESSAGE
+                    this,
+                    e.getMessage(),
+                    "Atenção",
+                    JOptionPane.WARNING_MESSAGE
             );
 
         } catch (SQLException e) {
 
             JOptionPane.showMessageDialog(
-                this,
-                "Erro ao cadastrar funcionário no banco de dados.",
-                "Erro",
-                JOptionPane.ERROR_MESSAGE
+                    this,
+                    "Erro ao cadastrar funcionário no banco de dados.",
+                    "Erro",
+                    JOptionPane.ERROR_MESSAGE
             );
         }
     }//GEN-LAST:event_cadastroButtonActionPerformed
@@ -412,7 +405,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton cadastroButton;
     private javax.swing.JFormattedTextField dataAdmissaoFormattedTextField;
     private javax.swing.JLabel dataDeAdmissaoLabel;
-    private java.awt.Panel funcionarioPanel;
     private javax.swing.JScrollPane funcionarioScrollPane;
     private javax.swing.JTable funcionariosTable;
     private javax.swing.JFrame jFrame1;
