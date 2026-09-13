@@ -16,7 +16,7 @@ Java 17 · Swing · FlatLaf · PostgreSQL · JDBC · Maven · Docker
 ## Como rodar
 
 ```bash
-docker compose up -d
+docker compose up -d na pasta raiz do projeto
 abrir o projeto no netbeans e executá-lo
 ```
 
