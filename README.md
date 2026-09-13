@@ -34,6 +34,12 @@ view → service → repository → PostgreSQL
 - **model** — entidades
 - **connection** — conexão e criação do schema
 
+## Prints das telas
+![Tela de Login](./assets/images/TelaLogin.png)
+
+![Tela de Cadastro](./assets/images/TelaCadastro.png)
+
+![Tela Principal](./assets/images/TelaPrincipal.png)
 ## Estrutura do banco
 
 **usuarios** — id, nome, email (unique), senha (SHA-256)
