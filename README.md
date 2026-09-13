@@ -49,3 +49,4 @@ view → service → repository → PostgreSQL
 ## Notas
 - O Service/Repository já implementam `atualizar` e `deletar`, prontos para uso futuro. A UI do teste cobre apenas cadastro e listagem, conforme o enunciado.
 - Credenciais do banco estão fixas em `Conexao.java` apenas para facilitar a avaliação. Em produção, usaria variáveis de ambiente.
+- Ficou meio tortinha a logo porque não achei na internet um exemplo bom :(
