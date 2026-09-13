@@ -2,7 +2,6 @@ package com.sisaudcom.crud.javaswing;
 
 import com.sisaudcom.crud.javaswing.connection.InicializadorBanco;
 import com.sisaudcom.crud.javaswing.view.TelaLogin;
-import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 
 import javax.swing.JOptionPane;
@@ -16,11 +15,10 @@ public class CrudJavaswing {
 
     public static void main(String[] args) {
 
-        // Define o Look and Feel (Nimbus)
         try {
             UIManager.setLookAndFeel(new FlatLightLaf());
         } catch (Exception ex) {
-            ex.printStackTrace();
+            System.err.println("FlatLaf indisponível, usando Look and Feel padrão.");
         }
 
         // Inicializa o banco de dados
