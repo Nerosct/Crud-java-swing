@@ -24,7 +24,7 @@ public class FuncionarioService {
     }
 
     public void cadastrar(Funcionario funcionario) throws SQLException {
-        validarCadastro(funcionario);
+        validar(funcionario);
         funcionarioRepository.salvar(funcionario);
     }
 
@@ -32,7 +32,7 @@ public class FuncionarioService {
         return funcionarioRepository.listarTodos();
     }
 
-    private void validarCadastro(Funcionario funcionario) {
+    private void validar(Funcionario funcionario) {
 
         if (funcionario == null) {
             throw new IllegalArgumentException("Funcionário inválido.");
@@ -46,7 +46,7 @@ public class FuncionarioService {
                     "O nome deve conter apenas letras e espaços."
             );
         }
-        
+
         if (funcionario.getDataDeAdmissao() == null) {
             throw new IllegalArgumentException("Informe a data de admissão.");
         }
@@ -57,6 +57,48 @@ public class FuncionarioService {
             throw new IllegalArgumentException("O salário deve ser maior que zero.");
         }
 
+    }
+
+    public void atualizar(Funcionario funcionario) throws SQLException {
+
+        validar(funcionario);
+
+        if (funcionario.getId() <= 0) {
+            throw new IllegalArgumentException("Funcionário inválido.");
+        }
+
+        funcionarioRepository.buscarPorId(funcionario.getId())
+                .orElseThrow(() -> new IllegalArgumentException(
+                        "Funcionário não encontrado."
+                ));
+
+        funcionarioRepository.atualizar(funcionario);
+    }
+
+    public void deletar(int id) throws SQLException {
+
+        if (id <= 0) {
+            throw new IllegalArgumentException("ID inválido.");
+        }
+
+        funcionarioRepository.buscarPorId(id)
+                .orElseThrow(() -> new IllegalArgumentException(
+                        "Funcionário não encontrado."
+                ));
+
+        funcionarioRepository.deletar(id);
+    }
+
+    public Funcionario buscarPorId(int id) throws SQLException {
+
+        if (id <= 0) {
+            throw new IllegalArgumentException("ID inválido.");
+        }
+
+        return funcionarioRepository.buscarPorId(id)
+                .orElseThrow(() -> new IllegalArgumentException(
+                        "Funcionário não encontrado."
+                ));
     }
 
 }

@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Optional;
 
 public class UsuarioRepository {
 
@@ -17,19 +18,18 @@ public class UsuarioRepository {
                 VALUES (?, ?, ?)
                 """;
 
-        try (Connection conexao = Conexao.conectar(); PreparedStatement stmt = conexao.prepareStatement(sql)) {
+        try (Connection conexao = Conexao.conectar();
+             PreparedStatement stmt = conexao.prepareStatement(sql)) {
 
             stmt.setString(1, usuario.getNome());
             stmt.setString(2, usuario.getEmail());
             stmt.setString(3, usuario.getSenha());
 
             stmt.executeUpdate();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 
-    public Usuario buscarPorEmail(String email) throws SQLException {
+    public Optional<Usuario> buscarPorEmail(String email) throws SQLException {
 
         String sql = """
                 SELECT id, nome, email, senha
@@ -37,7 +37,8 @@ public class UsuarioRepository {
                 WHERE email = ?
                 """;
 
-        try (Connection conexao = Conexao.conectar(); PreparedStatement stmt = conexao.prepareStatement(sql)) {
+        try (Connection conexao = Conexao.conectar();
+             PreparedStatement stmt = conexao.prepareStatement(sql)) {
 
             stmt.setString(1, email);
 
@@ -51,11 +52,11 @@ public class UsuarioRepository {
                     usuario.setEmail(rs.getString("email"));
                     usuario.setSenha(rs.getString("senha"));
 
-                    return usuario;
+                    return Optional.of(usuario);
                 }
             }
         }
 
-        return null;
+        return Optional.empty();
     }
 }

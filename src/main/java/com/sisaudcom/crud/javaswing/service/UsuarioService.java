@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.sisaudcom.crud.javaswing.service;
 
 import com.sisaudcom.crud.javaswing.model.Usuario;
@@ -31,13 +35,8 @@ public class UsuarioService {
             );
         }
 
-        Usuario usuarioExistente
-                = usuarioRepository.buscarPorEmail(usuario.getEmail());
-
-        if (usuarioExistente != null) {
-            throw new IllegalArgumentException(
-                    "Já existe um usuário cadastrado com este e-mail."
-            );
+        if (usuarioRepository.buscarPorEmail(usuario.getEmail()).isPresent()) {
+            throw new IllegalArgumentException("Já existe um usuário cadastrado com este e-mail.");
         }
 
         String senhaCriptografada
@@ -62,14 +61,8 @@ public class UsuarioService {
             );
         }
 
-        Usuario usuario
-                = usuarioRepository.buscarPorEmail(email.trim());
-
-        if (usuario == null) {
-            throw new IllegalArgumentException(
-                    "E-mail ou senha inválidos."
-            );
-        }
+        Usuario usuario = usuarioRepository.buscarPorEmail(email.trim())
+                .orElseThrow(() -> new IllegalArgumentException("E-mail ou senha inválidos."));
 
         String senhaCriptografada
                 = Criptografia.sha256(senha);
