@@ -35,6 +35,13 @@ public class UsuarioService {
             );
         }
 
+        if (!usuario.getSenha().matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$")) {
+            throw new IllegalArgumentException(
+                    "A senha deve conter pelo menos 8 caracteres, uma letra maiúscula, "
+                    + "uma letra minúscula e um número."
+            );
+        }
+
         if (usuarioRepository.buscarPorEmail(usuario.getEmail()).isPresent()) {
             throw new IllegalArgumentException("Já existe um usuário cadastrado com este e-mail.");
         }
