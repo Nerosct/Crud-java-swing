@@ -58,7 +58,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         labelCadastroDeUsuario = new javax.swing.JLabel();
         senhaPasswordField = new javax.swing.JPasswordField();
         confirmarSenhaPasswordField = new javax.swing.JPasswordField();
-        jLabel1 = new javax.swing.JLabel();
+        logoImagemLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro");
@@ -87,14 +87,14 @@ public class TelaCadastro extends javax.swing.JFrame {
         labelCadastroDeUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         labelCadastroDeUsuario.setText("USUÁRIO");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
+        logoImagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logoImagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(95, 95, 95)
@@ -147,7 +147,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27))
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(logoImagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
 
         pack();
@@ -241,13 +241,13 @@ public class TelaCadastro extends javax.swing.JFrame {
     private javax.swing.JButton btnCadastro;
     private javax.swing.JPasswordField confirmarSenhaPasswordField;
     private javax.swing.JTextField emailTextField;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel labelCadastroDeUsuario;
     private javax.swing.JLabel labelConfirmarSenha;
     private javax.swing.JLabel labelEmail;
     private javax.swing.JLabel labelNome;
     private javax.swing.JLabel labelSenha;
     private javax.swing.JLabel labelVoltar;
+    private javax.swing.JLabel logoImagemLabel;
     private javax.swing.JTextField nomeTextField;
     private javax.swing.JPasswordField senhaPasswordField;
     // End of variables declaration//GEN-END:variables

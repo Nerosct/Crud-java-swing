@@ -101,11 +101,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jFrame1 = new javax.swing.JFrame();
         funcionarioScrollPane = new javax.swing.JScrollPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         funcionariosTable = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        cadastrarFuncionarioLabel = new javax.swing.JLabel();
         nomeLabel = new javax.swing.JLabel();
         nomeTextField = new javax.swing.JTextField();
         dataDeAdmissaoLabel = new javax.swing.JLabel();
@@ -115,17 +114,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         statusCheckBox = new javax.swing.JCheckBox();
         cadastroButton = new javax.swing.JButton();
         sairLabel = new javax.swing.JLabel();
-
-        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
-        jFrame1.getContentPane().setLayout(jFrame1Layout);
-        jFrame1Layout.setHorizontalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jFrame1Layout.setVerticalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Principal");
@@ -155,8 +143,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         funcionarioScrollPane.setViewportView(jScrollPane1);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel1.setText("CADASTRAR NOVO FUNCIONARIO");
+        cadastrarFuncionarioLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        cadastrarFuncionarioLabel.setText("CADASTRAR NOVO FUNCIONARIO");
 
         nomeLabel.setText("Nome");
 
@@ -208,7 +196,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                     .addComponent(statusCheckBox)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addComponent(jLabel1))
+                        .addComponent(cadastrarFuncionarioLabel))
                     .addComponent(sairLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
@@ -219,7 +207,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(funcionarioScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(cadastrarFuncionarioLabel)
                         .addGap(18, 18, 18)
                         .addComponent(nomeLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -402,13 +390,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel cadastrarFuncionarioLabel;
     private javax.swing.JButton cadastroButton;
     private javax.swing.JFormattedTextField dataAdmissaoFormattedTextField;
     private javax.swing.JLabel dataDeAdmissaoLabel;
     private javax.swing.JScrollPane funcionarioScrollPane;
     private javax.swing.JTable funcionariosTable;
-    private javax.swing.JFrame jFrame1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel nomeLabel;
     private javax.swing.JTextField nomeTextField;
