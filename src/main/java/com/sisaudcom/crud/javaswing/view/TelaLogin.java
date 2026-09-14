@@ -50,7 +50,7 @@ public class TelaLogin extends javax.swing.JFrame {
         passwordLabel = new javax.swing.JLabel();
         senhaPasswordField = new javax.swing.JPasswordField();
         loginLabel = new javax.swing.JLabel();
-        btnLogin = new javax.swing.JButton();
+        loginButton = new javax.swing.JButton();
         cadastrarLabel = new javax.swing.JLabel();
         logoImagemLabel = new javax.swing.JLabel();
 
@@ -65,9 +65,9 @@ public class TelaLogin extends javax.swing.JFrame {
         loginLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         loginLabel.setText("LOGIN");
 
-        btnLogin.setText("Login");
-        btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnLogin.addActionListener(this::btnLoginActionPerformed);
+        loginButton.setText("Login");
+        loginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        loginButton.addActionListener(this::loginButtonActionPerformed);
 
         cadastrarLabel.setText("<html><u>Cadastre-se</u></html>");
         cadastrarLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -92,7 +92,7 @@ public class TelaLogin extends javax.swing.JFrame {
                             .addComponent(cadastrarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(37, 37, 37)
-                            .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(passwordLabel)
                             .addComponent(emailLabel)
@@ -118,7 +118,7 @@ public class TelaLogin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(senhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnLogin)
+                .addComponent(loginButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cadastrarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(73, Short.MAX_VALUE))
@@ -128,7 +128,7 @@ public class TelaLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         String email = emailTextField.getText().trim();
         String senha
                 = new String(senhaPasswordField.getPassword());
@@ -168,7 +168,7 @@ public class TelaLogin extends javax.swing.JFrame {
         }
 
 
-    }//GEN-LAST:event_btnLoginActionPerformed
+    }//GEN-LAST:event_loginButtonActionPerformed
 
     private void cadastrarLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastrarLabelMouseClicked
         java.awt.EventQueue.invokeLater(() -> {
@@ -203,10 +203,10 @@ public class TelaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnLogin;
     private javax.swing.JLabel cadastrarLabel;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JTextField emailTextField;
+    private javax.swing.JButton loginButton;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JLabel logoImagemLabel;
     private javax.swing.JLabel passwordLabel;

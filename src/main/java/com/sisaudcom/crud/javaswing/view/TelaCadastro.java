@@ -48,14 +48,14 @@ public class TelaCadastro extends javax.swing.JFrame {
     private void initComponents() {
 
         nomeTextField = new javax.swing.JTextField();
-        labelNome = new javax.swing.JLabel();
-        labelEmail = new javax.swing.JLabel();
+        nomeLabel = new javax.swing.JLabel();
+        emailLabel = new javax.swing.JLabel();
         emailTextField = new javax.swing.JTextField();
-        labelSenha = new javax.swing.JLabel();
-        labelConfirmarSenha = new javax.swing.JLabel();
-        btnCadastro = new javax.swing.JButton();
-        labelVoltar = new javax.swing.JLabel();
-        labelCadastroDeUsuario = new javax.swing.JLabel();
+        senhaLabel = new javax.swing.JLabel();
+        confirmarSenhaLabel = new javax.swing.JLabel();
+        cadastroButton = new javax.swing.JButton();
+        voltarLabel = new javax.swing.JLabel();
+        cadastroDeUsuarioLabel = new javax.swing.JLabel();
         senhaPasswordField = new javax.swing.JPasswordField();
         confirmarSenhaPasswordField = new javax.swing.JPasswordField();
         logoImagemLabel = new javax.swing.JLabel();
@@ -64,28 +64,28 @@ public class TelaCadastro extends javax.swing.JFrame {
         setTitle("Cadastro");
         setResizable(false);
 
-        labelNome.setText("Nome");
+        nomeLabel.setText("Nome");
 
-        labelEmail.setText("E-mail");
+        emailLabel.setText("E-mail");
 
-        labelSenha.setText("Senha");
+        senhaLabel.setText("Senha");
 
-        labelConfirmarSenha.setText("Confirmar Senha");
+        confirmarSenhaLabel.setText("Confirmar Senha");
 
-        btnCadastro.setText("Cadastrar");
-        btnCadastro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCadastro.addActionListener(this::btnCadastroActionPerformed);
+        cadastroButton.setText("Cadastrar");
+        cadastroButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cadastroButton.addActionListener(this::cadastroButtonActionPerformed);
 
-        labelVoltar.setText("<html><u>Voltar</u></html>");
-        labelVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        labelVoltar.addMouseListener(new java.awt.event.MouseAdapter() {
+        voltarLabel.setText("<html><u>Voltar</u></html>");
+        voltarLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        voltarLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                labelVoltarMouseClicked(evt);
+                voltarLabelMouseClicked(evt);
             }
         });
 
-        labelCadastroDeUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        labelCadastroDeUsuario.setText("USUÁRIO");
+        cadastroDeUsuarioLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        cadastroDeUsuarioLabel.setText("USUÁRIO");
 
         logoImagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
 
@@ -98,54 +98,54 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(95, 95, 95)
-                        .addComponent(labelCadastroDeUsuario)
+                        .addComponent(cadastroDeUsuarioLabel)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(labelConfirmarSenha)
-                                    .addComponent(labelSenha)
-                                    .addComponent(labelEmail)
-                                    .addComponent(labelNome)
+                                    .addComponent(confirmarSenhaLabel)
+                                    .addComponent(senhaLabel)
+                                    .addComponent(emailLabel)
+                                    .addComponent(nomeLabel)
                                     .addComponent(nomeTextField)
                                     .addComponent(emailTextField)
                                     .addComponent(senhaPasswordField)
                                     .addComponent(confirmarSenhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(42, 42, 42))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnCadastro)
+                                .addComponent(cadastroButton)
                                 .addGap(80, 80, 80))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(labelVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(voltarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(104, 104, 104))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelCadastroDeUsuario)
+                .addComponent(cadastroDeUsuarioLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addComponent(labelNome)
+                .addComponent(nomeLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelEmail)
+                .addComponent(emailLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelSenha)
+                .addComponent(senhaLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(senhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelConfirmarSenha)
+                .addComponent(confirmarSenhaLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(confirmarSenhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
-                .addComponent(btnCadastro)
+                .addComponent(cadastroButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(voltarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27))
             .addComponent(logoImagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
@@ -153,7 +153,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroActionPerformed
+    private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
         String nome = nomeTextField.getText().trim();
         String email = emailTextField.getText().trim();
 
@@ -203,14 +203,14 @@ public class TelaCadastro extends javax.swing.JFrame {
                     JOptionPane.ERROR_MESSAGE
             );
         }
-    }//GEN-LAST:event_btnCadastroActionPerformed
+    }//GEN-LAST:event_cadastroButtonActionPerformed
 
-    private void labelVoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelVoltarMouseClicked
+    private void voltarLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_voltarLabelMouseClicked
         java.awt.EventQueue.invokeLater(() -> {
             new TelaLogin().setVisible(true);
             dispose();
         });
-    }//GEN-LAST:event_labelVoltarMouseClicked
+    }//GEN-LAST:event_voltarLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -238,17 +238,17 @@ public class TelaCadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCadastro;
+    private javax.swing.JButton cadastroButton;
+    private javax.swing.JLabel cadastroDeUsuarioLabel;
+    private javax.swing.JLabel confirmarSenhaLabel;
     private javax.swing.JPasswordField confirmarSenhaPasswordField;
+    private javax.swing.JLabel emailLabel;
     private javax.swing.JTextField emailTextField;
-    private javax.swing.JLabel labelCadastroDeUsuario;
-    private javax.swing.JLabel labelConfirmarSenha;
-    private javax.swing.JLabel labelEmail;
-    private javax.swing.JLabel labelNome;
-    private javax.swing.JLabel labelSenha;
-    private javax.swing.JLabel labelVoltar;
     private javax.swing.JLabel logoImagemLabel;
+    private javax.swing.JLabel nomeLabel;
     private javax.swing.JTextField nomeTextField;
+    private javax.swing.JLabel senhaLabel;
     private javax.swing.JPasswordField senhaPasswordField;
+    private javax.swing.JLabel voltarLabel;
     // End of variables declaration//GEN-END:variables
 }

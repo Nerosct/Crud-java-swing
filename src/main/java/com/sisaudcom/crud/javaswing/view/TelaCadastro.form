@@ -30,7 +30,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
-                      <Component id="labelCadastroDeUsuario" min="-2" max="-2" attributes="0"/>
+                      <Component id="cadastroDeUsuarioLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
@@ -38,10 +38,10 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="labelConfirmarSenha" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelSenha" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelEmail" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelNome" min="-2" max="-2" attributes="0"/>
+                                  <Component id="confirmarSenhaLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="senhaLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="emailLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="nomeLabel" min="-2" max="-2" attributes="0"/>
                                   <Component id="nomeTextField" alignment="0" max="32767" attributes="0"/>
                                   <Component id="emailTextField" alignment="0" max="32767" attributes="0"/>
                                   <Component id="senhaPasswordField" alignment="0" max="32767" attributes="0"/>
@@ -50,11 +50,11 @@
                               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="btnCadastro" min="-2" max="-2" attributes="0"/>
+                              <Component id="cadastroButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="labelVoltar" min="-2" max="-2" attributes="0"/>
+                              <Component id="voltarLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -67,27 +67,27 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="labelCadastroDeUsuario" min="-2" max="-2" attributes="0"/>
+              <Component id="cadastroDeUsuarioLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="7" max="32767" attributes="0"/>
-              <Component id="labelNome" min="-2" max="-2" attributes="0"/>
+              <Component id="nomeLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="nomeTextField" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="labelEmail" min="-2" max="-2" attributes="0"/>
+              <Component id="emailLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="emailTextField" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="labelSenha" min="-2" max="-2" attributes="0"/>
+              <Component id="senhaLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="senhaPasswordField" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="labelConfirmarSenha" min="-2" max="-2" attributes="0"/>
+              <Component id="confirmarSenhaLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="confirmarSenhaPasswordField" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-              <Component id="btnCadastro" min="-2" max="-2" attributes="0"/>
+              <Component id="cadastroButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="labelVoltar" min="-2" max="-2" attributes="0"/>
+              <Component id="voltarLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
           </Group>
           <Component id="logoImagemLabel" alignment="0" pref="0" max="32767" attributes="0"/>
@@ -97,29 +97,29 @@
   <SubComponents>
     <Component class="javax.swing.JTextField" name="nomeTextField">
     </Component>
-    <Component class="javax.swing.JLabel" name="labelNome">
+    <Component class="javax.swing.JLabel" name="nomeLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nome"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="labelEmail">
+    <Component class="javax.swing.JLabel" name="emailLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="E-mail"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="emailTextField">
     </Component>
-    <Component class="javax.swing.JLabel" name="labelSenha">
+    <Component class="javax.swing.JLabel" name="senhaLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Senha"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="labelConfirmarSenha">
+    <Component class="javax.swing.JLabel" name="confirmarSenhaLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Confirmar Senha"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnCadastro">
+    <Component class="javax.swing.JButton" name="cadastroButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cadastrar"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -127,10 +127,10 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCadastroActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadastroButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="labelVoltar">
+    <Component class="javax.swing.JLabel" name="voltarLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;u&gt;Voltar&lt;/u&gt;&lt;/html&gt;"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -138,10 +138,10 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labelVoltarMouseClicked"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="voltarLabelMouseClicked"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="labelCadastroDeUsuario">
+    <Component class="javax.swing.JLabel" name="cadastroDeUsuarioLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="1"/>
