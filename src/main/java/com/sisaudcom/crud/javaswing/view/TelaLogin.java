@@ -139,10 +139,10 @@ public class TelaLogin extends javax.swing.JFrame {
 
             usuarioService.login(email, senha);
 
-            JOptionPane.showMessageDialog(
-                    this,
-                    "Login efetuado com Sucesso"
-            );
+//            JOptionPane.showMessageDialog(
+//                    this,
+//                    "Login efetuado com Sucesso"
+//            );
 
             java.awt.EventQueue.invokeLater(() -> {
                 new TelaPrincipal().setVisible(true);
