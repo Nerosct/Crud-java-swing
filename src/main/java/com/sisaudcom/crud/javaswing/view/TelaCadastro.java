@@ -185,6 +185,11 @@ public class TelaCadastro extends javax.swing.JFrame {
             senhaPasswordField.setText("");
             confirmarSenhaPasswordField.setText("");
 
+            java.awt.EventQueue.invokeLater(() -> {
+                new TelaLogin().setVisible(true);
+                dispose();
+            });
+
         } catch (IllegalArgumentException e) {
 
             JOptionPane.showMessageDialog(
